@@ -1,0 +1,41 @@
+{
+  "name": "create-class-arguments",
+  "displayName": "Create Class Arguments",
+  "description": "Takes different arguments in a class, and creates self.self = self for each one",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "create-class-arguments.create-arguments",
+      "title": "Create Class Arguments"
+    }],
+  "keybindings": [
+      {
+          "command": "create-class-arguments.create-arguments",
+          "key": "ctrl+alt+i"
+      }
+    ]
+  },
+  
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.90.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "20.x",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0"
+  }
+}
